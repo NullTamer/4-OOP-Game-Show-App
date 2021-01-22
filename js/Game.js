@@ -4,16 +4,16 @@
 
 class Game {
   constructor() {
-    this.missed = 0; //missed guesses total
+    this.missed = 0; //track the number of missed guesses by the player.
     this.phrases = [
-      // array of phrases
+      // an array of five Phrase objects to use with the game.
       new Phrase("Anomalocaris"),
       new Phrase("You are not Prepared"),
       new Phrase("Fus Ro Dah"),
       new Phrase("Godzilla"),
       new Phrase("Alaskan Bullworm"),
     ];
-    this.activePhrase = null;
+    this.activePhrase = null; // Phrase object that’s currently in play.
   }
 
   startGame() {
