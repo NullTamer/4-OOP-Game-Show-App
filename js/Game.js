@@ -78,10 +78,12 @@ class Game {
     //Win message is displayed if checkForWin is true
     if (this.checkForWin(true)) {
       overlay.classList.add("win");
+      overlay.classList.remove("lose");
       overlay.querySelector("#game-over-message").textContent = "You Win";
     } else {
       //Loss message is displayed if checkForWin is not true
       overlay.classList.add("lose");
+      overlay.classList.remove("win");
       overlay.querySelector("#game-over-message").textContent = "You Lose";
     }
     this.resetGame();
